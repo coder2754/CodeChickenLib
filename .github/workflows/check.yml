@@ -18,3 +18,11 @@ jobs:
         java-version: 1.8
     - name: Build
       run: ./gradlew build
+      
+    
+    
+    - name: Upload assets
+      uses: actions/upload-artifact@v2
+      with:
+        name: ${{ github.event.repository.name }}
+        path: ./*
